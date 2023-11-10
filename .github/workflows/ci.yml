@@ -13,6 +13,14 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+  # Testing another workflow call
+  testworkflowcall:
+  # Run a different Github actions file 
+    name: Run another Github actions file
+    id: AnotherGithubActionsFile
+    uses:  balamuralimnair/test-cicd/.github/workflows/ci.yml@main
+        
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -32,9 +40,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      # Run a different Github actions file 
-      - name: Run another Github actions file
-        id: AnotherGithubActionsFile
-        uses:  balamuralimnair/test-cicd/.github/workflows/ci.yml@main
-        
