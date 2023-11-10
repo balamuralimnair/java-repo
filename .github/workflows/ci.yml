@@ -17,8 +17,7 @@ jobs:
   testworkflowcall:
   # Run a different Github actions file 
     name: Run another Github actions file
-    id: AnotherGithubActionsFile
-    uses:  balamuralimnair/test-cicd/.github/workflows/ci.yml@main
+    uses: balamuralimnair/test-cicd/.github/workflows/ci.yml@main
         
   # This workflow contains a single job called "build"
   build:
